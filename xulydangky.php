@@ -11,7 +11,7 @@
     $gioitinh = 'nam';
     else $gioitinh = 'nữ';
 
-    $conn = mysqli_connect("localhost","root","","webdb");
+    $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
     $sql = "select email,matkhau from tbltaikhoan";
     $result = mysqli_query($conn, $sql);
 

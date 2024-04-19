@@ -35,7 +35,7 @@
 									<th>Xử lý</th>
 								</tr>
 								<?php
-									$conn = mysqli_connect("localhost","root","","webdb") or die("lỗi kết nối") ;	
+									$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef") or die("lỗi kết nối") ;	
 
 									$sqlSelect = "SELECT *FROM tblsach";
 

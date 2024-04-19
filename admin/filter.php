@@ -2,7 +2,7 @@
 <?php  
  if(isset($_POST["from_date"], $_POST["to_date"],$_POST["tableHD"]))  
  {  
-      $connect = mysqli_connect("localhost", "root", "", "webdb");  
+      $connect = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");  
       $output = '';  
       $query = "  
            SELECT * FROM tblhoadon  
@@ -73,7 +73,7 @@
  if(isset($_POST["from_date"], $_POST["to_date"],$_POST["tableTK"],$_POST['selectRole1']))
  {
       
-     $connect = mysqli_connect("localhost", "root", "", "webdb");  
+     $connect = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");  
      $output1 = '';  
      $select = $_POST['selectRole1'];
      if($select==0)

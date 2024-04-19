@@ -90,7 +90,7 @@
 		<div class="col-md-10 col-sm-10 center">
 		<div class="table-responsive">
             <?php
-                $connection = mysqli_connect("localhost","root","","webdb");
+                $connection = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
                 if(isset($_POST['edit_btn'])){
                     $id=$_POST['edit_id'];
                     $query = "SELECT * FROM tblchitiethd WHERE MaHD='$id'";

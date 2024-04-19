@@ -58,7 +58,7 @@
 											<li><a href="#">Sách Thuật Toán và Giải Thuật </a></li>
 											<li><a href="#">Sách Tiếng Anh Chuyên Ngành </a></li> -->
 											<?php 
-												$conn = mysqli_connect("localhost","root","","webdb");
+												$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 												$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 												mysqli_query($conn, "SET NAMES 'utf8'");
 												$result = mysqli_query($conn, $sql);
@@ -100,7 +100,7 @@
 												<?php 
 															if (isset($_SESSION['email']))
 															{
-																$conn = mysqli_connect("localhost","root","","webdb");
+																$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 																$sql = "select hovaten from tblthongtin where email = '".$_SESSION['email']."'";			
 																mysqli_query($conn, "SET NAMES 'utf8'");
 																$result = mysqli_query($conn, $sql);
@@ -169,7 +169,7 @@
 											<li><a href="#">Sách Thuật Toán và Giải Thuật </a></li>
 											<li><a href="#">Sách Tiếng Anh Chuyên Ngành </a></li> -->
 											<?php 
-												$conn = mysqli_connect("localhost","root","","webdb");
+												$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 												$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 												mysqli_query($conn, "SET NAMES 'utf8'");
 												$result = mysqli_query($conn, $sql);
@@ -290,7 +290,7 @@
 				<div class="row">
 				<!-- Start Single Product -->
 									<?php 
-										$conn = mysqli_connect("localhost","root","","webdb");
+										$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 										$sql = "select * from tblsach where HienThi = 0 ORDER BY idSach DESC LIMIT 0,4";
 										//SELECT * FROM `tblsach` ORDER BY idSach DESC LIMIT 0,4			
 										mysqli_query($conn, "SET NAMES 'utf8'");
@@ -500,7 +500,7 @@
 							<!-- Sản phẩm -->
 		 <!-- Modal -->
 	<?php 
-	$conn = mysqli_connect("localhost","root","","webdb");
+	$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 	$sql = "select * from tblsach where HienThi = 0 ORDER BY idSach DESC LIMIT 0,4";
 	//SELECT * FROM `tblsach` ORDER BY idSach DESC LIMIT 0,4			
 	mysqli_query($conn, "SET NAMES 'utf8'");

@@ -1,6 +1,6 @@
 <?php
     if (isset($_POST['btn_Save'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         if (isset($_POST['btn_Save'])&& isset($_POST['selectRole']) && isset($_POST['save_id'])) {
             $role=$_POST['selectRole'];
             $idSave=$_POST['save_id'];
@@ -12,7 +12,7 @@
         }
     }
     if (isset($_POST['btn_Lock'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $idSave=$_POST['save_id'];
 
         $sql = "UPDATE tbltaikhoan SET Del='1' WHERE email='".$idSave."'";
@@ -20,7 +20,7 @@
         header("location: main.php?act=onLeft&name=NhanVien");
     }
     if (isset($_POST['btn_unLock'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $idSave=$_POST['save_id'];
 
         $sql = "UPDATE tbltaikhoan SET Del='0' WHERE email='".$idSave."'";
@@ -29,7 +29,7 @@
     }
     
     if(isset($_POST['btnAdd'])){
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $idTheloai=$_POST['inpIDTheloai'];
         $TenTheLoai=$_POST['inptenTheloai'];
         if($idTheloai!="" && $TenTheLoai!=""){
@@ -40,7 +40,7 @@
     }
 
     if(isset($_POST['btnEdit'])){
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $idTheloai=$_POST['inpIDTheloai1'];
         $TenTheLoai=$_POST['inptenTheloai1'];
         if( $TenTheLoai!=""){
@@ -52,7 +52,7 @@
     }
 
     if (isset($_POST['btn_LockTL'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $id=$_POST['idTheloai'];
         $sql = "UPDATE tbltheloai SET HienThi='1' WHERE idTheLoai='$id'";
         $result = mysqli_query($conn, $sql);
@@ -68,7 +68,7 @@
         header("location: main.php?act=onLeft&name=TheLoai");
     }
     if (isset($_POST['btn_unLockTL'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $id=$_POST['idTheloai'];
         $sql = "UPDATE tbltheloai SET HienThi='0' WHERE idTheLoai='$id'";
         $result = mysqli_query($conn, $sql);
@@ -102,7 +102,7 @@
     }
 
     if (isset($_POST['btn_LockSP'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $id=$_POST['idSach'];
         echo $_POST['idSach'];
         $sql = "UPDATE tblsach SET HienThi='1' WHERE idSach='$id'";
@@ -119,7 +119,7 @@
         header("location: main.php?act=onLeft&name=SanPham&tranghientai=1");
     }
     if (isset($_POST['btn_unLockSP'])) {
-        $conn = mysqli_connect("localhost", "root", "", "webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
         $id=$_POST['idSach'];
         echo $_POST['idSach'];
         $sql = "UPDATE tblsach SET HienThi='0' WHERE idSach='$id'";

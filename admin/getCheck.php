@@ -1,6 +1,6 @@
 <?php
 session_start();
-$mysqli = new mysqli("localhost", "root", "", "webdb");
+$mysqli = new mysqli("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "e0b57694", "heroku_0dc7219a52593ef");
 if($mysqli->connect_error) {
   exit('Không thể kết nối với database!');
 }

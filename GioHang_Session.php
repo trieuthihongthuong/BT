@@ -17,7 +17,7 @@
 
         if (!isset($_SESSION['CTHD']))
         {
-            $conn = mysqli_connect("localhost","root","","webdb");
+            $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 			$sql = "select GiaBan from tblsach where idsach = '".$_GET['idsach']."'";
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_array($result);
@@ -47,7 +47,7 @@
                     if ($_SESSION['CTHD'][$i][0] == $_GET['idsach'])
                     {
                         $flag = false;
-                        $conn = mysqli_connect("localhost","root","","webdb");
+                        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
                         $sql = "select GiaBan from tblsach where idsach = '".$_GET['idsach']."'";
                         $result = mysqli_query($conn, $sql);
                         $row = mysqli_fetch_array($result);
@@ -61,7 +61,7 @@
                 
                 if ($flag)
                 {
-                    $conn = mysqli_connect("localhost","root","","webdb");
+                    $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
                     $sql = "select GiaBan from tblsach where idsach = '".$_GET['idsach']."'";
                     $result = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_array($result);
@@ -98,7 +98,7 @@
     if (isset($_GET['xoahoadon_SanPham']))  
     {
         $j = 1;
-        $conn = mysqli_connect("localhost","root","","webdb");
+        $conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
         $sql = "select GiaBan from tblsach where idsach = '".$_GET['idsach']."'";
         $result = mysqli_query($conn, $sql);
 

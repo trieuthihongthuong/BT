@@ -65,7 +65,7 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['matkhau'])) {
 											<li><a href="#">Sách Thuật Toán và Giải Thuật </a></li>
 											<li><a href="#">Sách Tiếng Anh Chuyên Ngành </a></li> -->
 											<?php 
-												$conn = mysqli_connect("localhost","root","","webdb");
+												$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 												$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 												mysqli_query($conn, "SET NAMES 'utf8'");
 												$result = mysqli_query($conn, $sql);
@@ -157,7 +157,7 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['matkhau'])) {
 											<li><a href="#">Sách Thuật Toán và Giải Thuật </a></li>
 											<li><a href="#">Sách Tiếng Anh Chuyên Ngành </a></li> -->
 											<?php 
-												$conn = mysqli_connect("localhost","root","","webdb");
+												$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 												$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 												mysqli_query($conn, "SET NAMES 'utf8'");
 												$result = mysqli_query($conn, $sql);
@@ -223,7 +223,7 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['matkhau'])) {
         						<ul>
 									<!-- khung bên trái -->
                                     <?php 
-                                    	$conn = mysqli_connect("localhost","root","","webdb");
+                                    	$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 										$sql = "select * from tblthongtin where email = '".$_SESSION['email']."'";			
 										mysqli_query($conn, "SET NAMES 'utf8'");
 										$result = mysqli_query($conn, $sql);

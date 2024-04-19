@@ -26,7 +26,7 @@
 
 <div class="table-responsive">
 <?php
-    $connection = mysqli_connect("localhost", "root", "", "webdb");
+    $connection = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
     $query = "SELECT * FROM tbltheloai";
 
     if (isset($_GET['search'])) {
@@ -89,7 +89,7 @@
 
 <!-- ModalEditButton -->
 <?php 
-	 $connection = mysqli_connect("localhost", "root", "", "webdb");
+	 $connection = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
      $query = "SELECT idTheLoai,tenTheLoai FROM tbltheloai";
      $query_run = mysqli_query($connection, $query);
      if (mysqli_num_rows($query_run)>0) {
@@ -135,7 +135,7 @@
 
 <!-- Modal Edit Button -->
 <?php 
-	 $connection = mysqli_connect("localhost", "root", "", "webdb");
+	 $connection = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
      $query = "SELECT idTheLoai,tenTheLoai FROM tbltheloai";
      $query_run = mysqli_query($connection, $query);
      if (mysqli_num_rows($query_run)>0) {

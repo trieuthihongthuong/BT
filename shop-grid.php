@@ -70,7 +70,7 @@
 											<li><a href="#">Sách Thuật Toán và Giải Thuật </a></li>
 											<li><a href="#">Sách Tiếng Anh Chuyên Ngành </a></li> -->
 											<?php 
-												$conn = mysqli_connect("localhost","root","","webdb");
+												$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 												$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 												mysqli_query($conn, "SET NAMES 'utf8'");
 												$result = mysqli_query($conn, $sql);
@@ -162,7 +162,7 @@
 											<li><a href="#">Sách Thuật Toán và Giải Thuật </a></li>
 											<li><a href="#">Sách Tiếng Anh Chuyên Ngành </a></li> -->
 											<?php 
-												$conn = mysqli_connect("localhost","root","","webdb");
+												$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 												$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 												mysqli_query($conn, "SET NAMES 'utf8'");
 												$result = mysqli_query($conn, $sql);
@@ -231,7 +231,7 @@
         						<ul>
 									<!-- khung bên trái -->
         							<?php 
-										$conn = mysqli_connect("localhost","root","","webdb");
+										$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 										$sql = "select idtheloai,tentheloai from tbltheloai where HienThi = 0";			
 										mysqli_query($conn, "SET NAMES 'utf8'");
 										$result = mysqli_query($conn, $sql);
@@ -302,7 +302,7 @@
 										$idtl = $_GET['idtl'];
 										$tranghientai = $_GET['tranghientai'];
 
-										$conn = mysqli_connect("localhost","root","","webdb");
+										$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 										$sql = "select idSach from tblsach where idtheloai = '".$idtl."' and HienThi = 0";			
 										mysqli_query($conn, "SET NAMES 'utf8'");
 										$result = mysqli_query($conn, $sql);
@@ -326,7 +326,7 @@
 									else if (isset($_GET['tranghientai'])){
 										$tranghientai = $_GET['tranghientai'];
 
-										$conn = mysqli_connect("localhost","root","","webdb");
+										$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 										$sql = "select idSach from tblsach where HienThi = 0";			
 										mysqli_query($conn, "SET NAMES 'utf8'");
 										$result = mysqli_query($conn, $sql);
@@ -345,7 +345,7 @@
 									{
 										$tensach = $_GET['timkiem'];
 										$sotrang = 0;
-										$conn = mysqli_connect("localhost","root","","webdb");
+										$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 										$sql = "select * from tblsach where tensach like '%".$tensach."%' and HienThi = 0";			
 										mysqli_query($conn, "SET NAMES 'utf8'");
 										$result = mysqli_query($conn, $sql);
@@ -504,7 +504,7 @@
 		$idtl = $_GET['idtl'];
 		$tranghientai = $_GET['tranghientai'];
 
-		$conn = mysqli_connect("localhost","root","","webdb");
+		$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 		$sql = "select idSach from tblsach where idtheloai = '".$idtl."' and HienThi = 0";			
 		mysqli_query($conn, "SET NAMES 'utf8'");
 		$result = mysqli_query($conn, $sql);
@@ -528,7 +528,7 @@
 	else if ( !isset($_GET['timkiem'])) {
 		$tranghientai = $_GET['tranghientai'];
 
-		$conn = mysqli_connect("localhost","root","","webdb");
+		$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 		$sql = "select idSach from tblsach where HienThi = 0";			
 		mysqli_query($conn, "SET NAMES 'utf8'");
 		$result = mysqli_query($conn, $sql);
@@ -552,7 +552,7 @@
 	{
 		$tensach = $_GET['timkiem'];
 		$sotrang = 0;
-		$conn = mysqli_connect("localhost","root","","webdb");
+		$conn = mysqli_connect("us-cluster-east-01.k8s.cleardb.net","bb736c65a3f5c3","e0b57694","heroku_0dc7219a52593ef");
 		$sql = "SELECT * from tblsach where tensach like '%".$tensach."%' and HienThi = 0";			
 		mysqli_query($conn, "SET NAMES 'utf8'");
 		$result = mysqli_query($conn, $sql);

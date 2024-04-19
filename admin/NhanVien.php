@@ -22,7 +22,7 @@
 	<div class="card-body">
 	<div class="table-responsive">
 <?php
-    $connection = mysqli_connect("localhost", "root", "", "webdb");
+    $connection = mysqli_connect("us-cluster-east-01.k8s.cleardb.net", "bb736c65a3f5c3", "", "heroku_0dc7219a52593ef");
 	$query = "SELECT * FROM tbltaikhoan";
 
 	if (isset($_GET['search'])) {
